@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js.pioneer.model", "js.pioneer.model\js.pioneer.model.csproj", "{416E0229-CB96-4C71-8284-DD5D1A007E6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{416E0229-CB96-4C71-8284-DD5D1A007E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{416E0229-CB96-4C71-8284-DD5D1A007E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{416E0229-CB96-4C71-8284-DD5D1A007E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{416E0229-CB96-4C71-8284-DD5D1A007E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1A790E0-34E9-4F03-B408-6FF7987A97F5}
+	EndGlobalSection
+EndGlobal
