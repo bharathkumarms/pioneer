@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace js.pioneer.webproj
+namespace js.pioneer.web
 {
     public class Program
     {

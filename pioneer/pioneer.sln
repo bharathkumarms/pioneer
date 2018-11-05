@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "js.pioneer.repository", "js
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "js.pioneer.utils", "js.pioneer.utils\js.pioneer.utils.csproj", "{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js.pioneer.webproj", "js.pioneer.webproj\js.pioneer.webproj.csproj", "{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js.pioneer.web", "js.pioneer.web\js.pioneer.web.csproj", "{FAEFFFD7-0183-4F6C-8A7A-A30047C3A375}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAEFFFD7-0183-4F6C-8A7A-A30047C3A375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAEFFFD7-0183-4F6C-8A7A-A30047C3A375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAEFFFD7-0183-4F6C-8A7A-A30047C3A375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAEFFFD7-0183-4F6C-8A7A-A30047C3A375}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

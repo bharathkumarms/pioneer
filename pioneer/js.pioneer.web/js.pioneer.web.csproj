@@ -3,7 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <DockerTargetOS>Windows</DockerTargetOS>
-    <UserSecretsId>0dedf53a-b854-4875-a0ae-d0e3524f5b86</UserSecretsId>
+    <UserSecretsId>4328455d-d5ca-45a3-ae87-7e490aac12da</UserSecretsId>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
