@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js.pioneer.model", "js.pioneer.model\js.pioneer.model.csproj", "{416E0229-CB96-4C71-8284-DD5D1A007E6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "js.pioneer.model", "js.pioneer.model\js.pioneer.model.csproj", "{416E0229-CB96-4C71-8284-DD5D1A007E6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js.pioneer.webapi", "js.pioneer.webapi\js.pioneer.webapi.csproj", "{928EEE75-A4E9-4FCB-A21A-9C2CF7679816}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "js.pioneer.webapi", "js.pioneer.webapi\js.pioneer.webapi.csproj", "{928EEE75-A4E9-4FCB-A21A-9C2CF7679816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js.pioneer.repository", "js.pioneer.repository\js.pioneer.repository.csproj", "{5D49B9A9-A2B5-40C8-8DFC-D64248A291C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "js.pioneer.repository", "js.pioneer.repository\js.pioneer.repository.csproj", "{5D49B9A9-A2B5-40C8-8DFC-D64248A291C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js.pioneer.web", "js.pioneer.web\js.pioneer.web.csproj", "{9FBD83DA-FDB3-4CCA-8AE1-41D65AFF3101}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "js.pioneer.utils", "js.pioneer.utils\js.pioneer.utils.csproj", "{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js.pioneer.utils", "js.pioneer.utils\js.pioneer.utils.csproj", "{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js.pioneer.webproj", "js.pioneer.webproj\js.pioneer.webproj.csproj", "{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{5D49B9A9-A2B5-40C8-8DFC-D64248A291C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D49B9A9-A2B5-40C8-8DFC-D64248A291C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D49B9A9-A2B5-40C8-8DFC-D64248A291C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9FBD83DA-FDB3-4CCA-8AE1-41D65AFF3101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FBD83DA-FDB3-4CCA-8AE1-41D65AFF3101}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FBD83DA-FDB3-4CCA-8AE1-41D65AFF3101}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FBD83DA-FDB3-4CCA-8AE1-41D65AFF3101}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79826E1D-BF46-440C-B4D6-16BAFADE3F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1AF780-6CD3-4209-8B13-5C3338F10E3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
