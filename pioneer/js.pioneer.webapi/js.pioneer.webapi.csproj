@@ -11,9 +11,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\js.pioneer.model\js.pioneer.model.csproj" />
+    <ProjectReference Include="..\js.pioneer.repository\js.pioneer.repository.csproj" />
+    <ProjectReference Include="..\js.pioneer.utils\js.pioneer.utils.csproj" />
   </ItemGroup>
 
 </Project>
