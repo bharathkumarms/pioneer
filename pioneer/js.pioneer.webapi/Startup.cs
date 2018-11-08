@@ -37,7 +37,15 @@ namespace js.pioneer.webapi
 
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
+
             services.Configure<AppSettings>(appSettingsSection);
+            services.Configure<AppSettings>(options =>
+            {
+                options.ConnectionString
+                    = Configuration.GetSection("MongoConnection:ConnectionString").Value;
+                options.Database
+                    = Configuration.GetSection("MongoConnection:Database").Value;
+            });
 
             // configure jwt authentication
             var appSettings = appSettingsSection.Get<AppSettings>();

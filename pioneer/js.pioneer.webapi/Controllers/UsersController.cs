@@ -16,21 +16,25 @@ namespace js.pioneer.webapi.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
         private IUserRepository _userRepository;
-        private IMapper _mapper;
         private readonly AppSettings _appSettings;
 
         public UsersController(
             IUserRepository userRepository,
-            IMapper mapper,
             IOptions<AppSettings> appSettings)
         {
             _userRepository = userRepository;
-            _mapper = mapper;
             _appSettings = appSettings.Value;
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        public ActionResult<IEnumerable<string>> Get()
+        {
+            return new string[] { "value1", "value2" };
         }
 
         [AllowAnonymous]
