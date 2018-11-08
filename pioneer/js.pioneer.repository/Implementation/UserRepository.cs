@@ -1,14 +1,35 @@
 ﻿using js.pioneer.model;
+using Microsoft.Extensions.Configuration;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace js.pioneer.repository
 {
     public class UserRepository : IUserRepository
     {
+        private readonly SubscriptionContext _context = null;
+
+        public UserRepository(IConfiguration config)
+        {
+            _context = new SubscriptionContext(config);
+        }
+
         public User Authenticate(string username, string password)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var query = _context.Users
+                            .Find(user => user.Username == username);
+
+                return query.FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                // log or manage the exception
+                throw ex;
+            }
         }
 
         public User Create(User user, string password)
