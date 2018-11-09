@@ -41,7 +41,7 @@ namespace js.pioneer.webapi.Controllers
         [HttpPost("authenticate")]
         public IActionResult Authenticate([FromBody]User userDto)
         {
-            var user = _userRepository.Authenticate(userDto.Username, userDto.Password);
+            var user = _userRepository.Authenticate(userDto.UserName, userDto.Password);
 
             if (user == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
@@ -52,7 +52,7 @@ namespace js.pioneer.webapi.Controllers
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, user.Username.ToString())
+                    new Claim(ClaimTypes.Name, user.UserName.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
@@ -63,7 +63,7 @@ namespace js.pioneer.webapi.Controllers
             // return basic user info (without password) and token to store client side
             return Ok(new
             {
-                Id = user.Username,
+                Id = user.UserName,
                 Token = tokenString
             });
         }

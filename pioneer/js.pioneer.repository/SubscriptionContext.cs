@@ -24,7 +24,7 @@ namespace js.pioneer.repository
         {
             get
             {
-                return _database.GetCollection<User>("User");
+                return _database.GetCollection<User>("user");
             }
         }
     }

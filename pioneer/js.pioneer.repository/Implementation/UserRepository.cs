@@ -21,7 +21,7 @@ namespace js.pioneer.repository
             try
             {
                 var query = _context.Users
-                            .Find(user => user.Username == username);
+                            .Find(user => user.UserName == username);
 
                 return query.FirstOrDefault();
             }
