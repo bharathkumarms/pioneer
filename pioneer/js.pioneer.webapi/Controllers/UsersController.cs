@@ -11,6 +11,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using js.pioneer.model;
 using js.pioneer.repository;
+using Microsoft.Extensions.Logging;
 
 namespace js.pioneer.webapi.Controllers
 {
@@ -21,13 +22,16 @@ namespace js.pioneer.webapi.Controllers
     {
         private IUserRepository _userRepository;
         private readonly AppSettings _appSettings;
+        readonly ILogger<UsersController> _log;
 
         public UsersController(
             IUserRepository userRepository,
-            IOptions<AppSettings> appSettings)
+            IOptions<AppSettings> appSettings,
+            ILogger<UsersController> log)
         {
             _userRepository = userRepository;
             _appSettings = appSettings.Value;
+            _log = log;
         }
 
         [AllowAnonymous]
@@ -70,6 +74,7 @@ namespace js.pioneer.webapi.Controllers
                 });
             }catch(Exception ex)
             {
+                _log.LogError(ex.ToString());
                 return Ok(new Exception(ex.ToString()));
             }
             
