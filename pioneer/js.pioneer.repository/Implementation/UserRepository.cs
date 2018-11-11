@@ -27,7 +27,6 @@ namespace js.pioneer.repository
             }
             catch (Exception ex)
             {
-                // log or manage the exception
                 throw ex;
             }
         }
