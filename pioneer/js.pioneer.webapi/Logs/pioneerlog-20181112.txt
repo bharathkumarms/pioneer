@@ -180,3 +180,19 @@ Parameter name: KeySize
 2018-11-12T22:32:03.5741098+05:30 0HLI8O213V8Q5:00000002 [INF] Executing ObjectResult, writing value of type '"<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (8a1b66c8)
 2018-11-12T22:32:03.5839599+05:30 0HLI8O213V8Q5:00000002 [INF] Executed action "js.pioneer.webapi.Controllers.UsersController.Authenticate (js.pioneer.webapi)" in 21630.5259ms (afa2e885)
 2018-11-12T22:32:03.5920852+05:30 0HLI8O213V8Q5:00000002 [INF] Request finished in 21664.1638ms 200 application/json; charset=utf-8 (791a596a)
+2018-11-12T22:37:24.0258452+05:30 0HLI8O213V8Q7:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:50701/api/users/authenticate application/json 43 (ca22a1cb)
+2018-11-12T22:37:24.0285364+05:30 0HLI8O213V8Q7:00000001 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing action "js.pioneer.webapi.Controllers.UsersController.Authenticate (js.pioneer.webapi)" (a44c0341)
+2018-11-12T22:37:24.0431470+05:30 0HLI8O213V8Q7:00000001 [INF] Executing action method "js.pioneer.webapi.Controllers.UsersController.Authenticate (js.pioneer.webapi)" with arguments (["js.pioneer.model.User"]) - Validation state: Valid (4e3479ed)
+2018-11-12T22:37:24.5409203+05:30 0HLI8O213V8Q7:00000001 [ERR] System.FormatException: An error occurred while deserializing the RoleId property of class js.pioneer.model.User: Expected a nested document representing the serialized form of a js.pioneer.model.Role value, but found a value of type ObjectId instead. ---> System.FormatException: Expected a nested document representing the serialized form of a js.pioneer.model.Role value, but found a value of type ObjectId instead.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize(IBsonSerializer serializer, BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at js.pioneer.repository.UserRepository.Authenticate(String username, String password) in D:\pioneer\pioneer\js.pioneer.repository\Implementation\UserRepository.cs:line 30
+   at js.pioneer.webapi.Controllers.UsersController.Authenticate(User userDto) in D:\pioneer\pioneer\js.pioneer.webapi\Controllers\UsersController.cs:line 50 (b2309e96)
+2018-11-12T22:37:24.5439868+05:30 0HLI8O213V8Q7:00000001 [INF] Executed action method "js.pioneer.webapi.Controllers.UsersController.Authenticate (js.pioneer.webapi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 498.2376ms. (50a9e262)
+2018-11-12T22:37:24.5463588+05:30 0HLI8O213V8Q7:00000001 [INF] Executing ObjectResult, writing value of type '"System.Exception"'. (8a1b66c8)
+2018-11-12T22:37:24.5529448+05:30 0HLI8O213V8Q7:00000001 [INF] Executed action "js.pioneer.webapi.Controllers.UsersController.Authenticate (js.pioneer.webapi)" in 520.8055ms (afa2e885)
+2018-11-12T22:37:24.5590146+05:30 0HLI8O213V8Q7:00000001 [INF] Request finished in 532.9295ms 200 application/json; charset=utf-8 (791a596a)
