@@ -27,5 +27,13 @@ namespace js.pioneer.repository
                 return _database.GetCollection<User>("user");
             }
         }
+
+        public IMongoCollection<Subscriber> Subscribers
+        {
+            get
+            {
+                return _database.GetCollection<Subscriber>("subscribers");
+            }
+        }
     }
 }
