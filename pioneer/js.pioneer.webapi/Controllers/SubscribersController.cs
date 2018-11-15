@@ -16,13 +16,17 @@ namespace js.pioneer.webapi
         private readonly AppSettings _appSettings;
         readonly ILogger<SubscribersController> _log;
 
+        private IAuditTrialRepository _auditTrialRepository;
+
         public SubscribersController(ISubscriberRepository subscriberRepository,
             IOptions<AppSettings> appSettings,
-            ILogger<SubscribersController> log)
+            ILogger<SubscribersController> log,
+            IAuditTrialRepository auditTrialRepository)
         {
             _subscriberRepository = subscriberRepository;
             _appSettings = appSettings.Value;
             _log = log;
+            _auditTrialRepository = auditTrialRepository;
         }
         [HttpGet]
         [Route("api/subscriber")]
@@ -75,6 +79,7 @@ namespace js.pioneer.webapi
 
                 model.CreatedDate = DateTime.UtcNow;
                 await _subscriberRepository.AddSubscriber(model);
+
                 return Ok("Your Subscriber has been added successfully");
             }
             catch (Exception ex)

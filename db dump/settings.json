@@ -1,1 +1,1 @@
-{"_id":{"$oid":"5bdfa61b890d9a27740c7229"},"type":{"month":{"$numberInt":"30"},"year":{"$numberInt":"365"}}}
+{"_id":{"$oid":"5bdfa61b890d9a27740c7229"},"Type":{"_id":{"$oid":"5beb8e58431f323538123f62"},"TypeId":{"$numberInt":"1"},"Name":"Year","Days":{"$numberInt":"365"}},"DueDateNotificationInDays":{"$numberInt":"15"}}

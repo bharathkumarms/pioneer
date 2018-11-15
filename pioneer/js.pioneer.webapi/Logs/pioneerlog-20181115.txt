@@ -1,0 +1,58 @@
+2018-11-15T07:13:09.3072135+05:30 0HLIAJEP3IM9B:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50701/  0 (ca22a1cb)
+2018-11-15T07:13:09.3072234+05:30 0HLIAJEP3IM9C:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:50701/api/values   (ca22a1cb)
+2018-11-15T07:13:09.4526486+05:30 0HLIAJEP3IM9C:00000001 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2018-11-15T07:13:09.5746156+05:30 0HLIAJEP3IM9B:00000001 [INF] Request finished in 273.8376ms 200  (791a596a)
+2018-11-15T07:13:11.4064549+05:30 0HLIAJEP3IM9C:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "js.pioneer.webapi.Controllers.ValuesController.Get (js.pioneer.webapi)" (a44c0341)
+2018-11-15T07:13:11.5723317+05:30 0HLIAJEP3IM9C:00000001 [INF] Executing action method "js.pioneer.webapi.Controllers.ValuesController.Get (js.pioneer.webapi)" - Validation state: Valid (dad538d7)
+2018-11-15T07:13:11.5803258+05:30 0HLIAJEP3IM9C:00000001 [INF] Executed action method "js.pioneer.webapi.Controllers.ValuesController.Get (js.pioneer.webapi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.3073ms. (50a9e262)
+2018-11-15T07:13:11.5951521+05:30 0HLIAJEP3IM9C:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2018-11-15T07:13:12.9246352+05:30 0HLIAJEP3IM9C:00000001 [INF] Executed action "js.pioneer.webapi.Controllers.ValuesController.Get (js.pioneer.webapi)" in 1510.1281ms (afa2e885)
+2018-11-15T07:13:12.9627891+05:30 0HLIAJEP3IM9C:00000001 [INF] Request finished in 3642.1549ms 200 application/json; charset=utf-8 (791a596a)
+2018-11-15T07:13:13.4088829+05:30 0HLIAJEP3IM9B:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:50701/favicon.ico   (ca22a1cb)
+2018-11-15T07:13:13.4317748+05:30 0HLIAJEP3IM9B:00000002 [INF] Request finished in 3.2778ms 404  (791a596a)
+2018-11-15T07:13:29.8176845+05:30 0HLIAJEP3IM9C:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:50701/api/users/authenticate application/json 43 (ca22a1cb)
+2018-11-15T07:13:29.8342021+05:30 0HLIAJEP3IM9C:00000002 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing action "js.pioneer.webapi.Controllers.UsersController.Authenticate (js.pioneer.webapi)" (a44c0341)
+2018-11-15T07:13:31.3329996+05:30 0HLIAJEP3IM9C:00000002 [INF] Executing action method "js.pioneer.webapi.Controllers.UsersController.Authenticate (js.pioneer.webapi)" with arguments (["js.pioneer.model.User"]) - Validation state: Valid (4e3479ed)
+2018-11-15T07:14:02.9915843+05:30 0HLIAJEP3IM9C:00000002 [ERR] System.TimeoutException: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "ReplicaSet", Type : "ReplicaSet", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/cluster0-shard-00-00-2ahkv.mongodb.net:27017" }", EndPoint: "Unspecified/cluster0-shard-00-00-2ahkv.mongodb.net:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No such host is known
+   at System.Net.Dns.HostResolutionEndHelper(IAsyncResult asyncResult)
+   at System.Net.Dns.EndGetHostAddresses(IAsyncResult asyncResult)
+   at System.Net.Dns.<>c.<GetHostAddressesAsync>b__25_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.ResolveEndPointsAsync(EndPoint initial)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.SslStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.HeartbeatAsync(CancellationToken cancellationToken)" }, { ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/cluster0-shard-00-01-2ahkv.mongodb.net:27017" }", EndPoint: "Unspecified/cluster0-shard-00-01-2ahkv.mongodb.net:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No such host is known
+   at System.Net.Dns.HostResolutionEndHelper(IAsyncResult asyncResult)
+   at System.Net.Dns.EndGetHostAddresses(IAsyncResult asyncResult)
+   at System.Net.Dns.<>c.<GetHostAddressesAsync>b__25_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.ResolveEndPointsAsync(EndPoint initial)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.SslStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.HeartbeatAsync(CancellationToken cancellationToken)" }, { ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/cluster0-shard-00-02-2ahkv.mongodb.net:27017" }", EndPoint: "Unspecified/cluster0-shard-00-02-2ahkv.mongodb.net:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No such host is known
+   at System.Net.Dns.HostResolutionEndHelper(IAsyncResult asyncResult)
+   at System.Net.Dns.EndGetHostAddresses(IAsyncResult asyncResult)
+   at System.Net.Dns.<>c.<GetHostAddressesAsync>b__25_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.ResolveEndPointsAsync(EndPoint initial)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.SslStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.HeartbeatAsync(CancellationToken cancellationToken)" }] }.
+   at js.pioneer.repository.UserRepository.Authenticate(String username, String password) in D:\pioneer\pioneer\js.pioneer.repository\Implementation\UserRepository.cs:line 30
+   at js.pioneer.webapi.Controllers.UsersController.Authenticate(User userDto) in D:\pioneer\pioneer\js.pioneer.webapi\Controllers\UsersController.cs:line 50 (d359a1d6)
+2018-11-15T07:14:02.9944382+05:30 0HLIAJEP3IM9C:00000002 [INF] Executed action method "js.pioneer.webapi.Controllers.UsersController.Authenticate (js.pioneer.webapi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 31658.8996ms. (50a9e262)
+2018-11-15T07:14:02.9982245+05:30 0HLIAJEP3IM9C:00000002 [INF] Executing ObjectResult, writing value of type '"System.Exception"'. (8a1b66c8)
+2018-11-15T07:14:03.0338369+05:30 0HLIAJEP3IM9C:00000002 [INF] Executed action "js.pioneer.webapi.Controllers.UsersController.Authenticate (js.pioneer.webapi)" in 33196.8405ms (afa2e885)
+2018-11-15T07:14:03.0368117+05:30 0HLIAJEP3IM9C:00000002 [INF] Request finished in 33220.3249ms 200 application/json; charset=utf-8 (791a596a)
