@@ -1,0 +1,8 @@
+{
+  "subscriberGetNotfound": "No Subscriber found!",
+  "subscriberPostSuccess": "Your Subscriber has been added successfully",
+  "subscriberUpdateSuccess": "Your Subscriber's details has been updated successfully",
+  "subscriberUpdateErrorNotFound": "No Subscriber found to update",
+  "subscriberDeleteSuccess": "Your Subscriber has been deleted successfully",
+  "subscriberDeleteErrorNotFound": "Subscriber number missing"
+}

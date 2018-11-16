@@ -52,7 +52,7 @@ namespace js.pioneer.webapi
                 var Subscriber = await _subscriberRepository.GetSubscriber(subscriptionNo);
                 if (Subscriber == null)
                 {
-                    return Json("No Subscriber found!");
+                    return Json(NotificationMessage.SubscriberGetNotfound);
                 }
                 return Json(Subscriber);
             }
@@ -80,7 +80,7 @@ namespace js.pioneer.webapi
                 model.CreatedDate = DateTime.UtcNow;
                 await _subscriberRepository.AddSubscriber(model);
 
-                return Ok("Your Subscriber has been added successfully");
+                return Ok(NotificationMessage.SubscriberPostSuccess);
             }
             catch (Exception ex)
             {
@@ -101,9 +101,9 @@ namespace js.pioneer.webapi
                 var result = await _subscriberRepository.UpdateSubscriber(model);
                 if (result)
                 {
-                    return Ok("Your Subscriber's details has been updated successfully");
+                    return Ok(NotificationMessage.SubscriberUpdateSuccess);
                 }
-                return BadRequest("No Subscriber found to update");
+                return BadRequest(NotificationMessage.SubscriberUpdateErrorNotFound);
             }catch(Exception ex)
             {
                 _log.LogError(ex.ToString());
@@ -118,9 +118,9 @@ namespace js.pioneer.webapi
             try
             {
                 if (string.IsNullOrWhiteSpace(subscriptionNo))
-                    return BadRequest("Subscriber number missing");
+                    return BadRequest(NotificationMessage.SubscriberDeleteErrorNotFound);
                 await _subscriberRepository.RemoveSubscriber(subscriptionNo);
-                return Ok("Your Subscriber has been deleted successfully");
+                return Ok(NotificationMessage.SubscriberDeleteSuccess);
             }
             catch (Exception ex)
             {
