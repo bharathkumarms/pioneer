@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\" />
+    <PackageReference Include="CompareNETObjects" Version="4.57.0" />
   </ItemGroup>
 
   <ItemGroup>

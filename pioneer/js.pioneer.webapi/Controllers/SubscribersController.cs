@@ -17,16 +17,19 @@ namespace js.pioneer.webapi
         readonly ILogger<SubscribersController> _log;
 
         private IAuditTrialService _auditTrialService;
+        private ICompareUtil _compareUtil;
 
         public SubscribersController(ISubscriberRepository subscriberRepository,
             IOptions<AppSettings> appSettings,
             ILogger<SubscribersController> log,
-            IAuditTrialService auditTrialService)
+            IAuditTrialService auditTrialService,
+            ICompareUtil compareUtil)
         {
             _subscriberRepository = subscriberRepository;
             _appSettings = appSettings.Value;
             _log = log;
             _auditTrialService = auditTrialService;
+            _compareUtil = compareUtil;
         }
         [HttpGet]
         [Route("api/subscriber")]
@@ -101,10 +104,13 @@ namespace js.pioneer.webapi
                 if (string.IsNullOrWhiteSpace(model.CustomerName))
                     return BadRequest("Subscriber name missing");
                 model.ModifiedDate = DateTime.UtcNow;
+                var subscriberBeforeUpdation = await _subscriberRepository.GetSubscriber(model.SubscriptionNo);
+
                 var result = await _subscriberRepository.UpdateSubscriber(model);
                 if (result)
                 {
-                    await _auditTrialService.Insert(model.SubscriptionNo, NotificationMessage.SubscriberUpdateSuccess);
+                    string changesDone = _compareUtil.Compare(subscriberBeforeUpdation, result);
+                    await _auditTrialService.Insert(model.SubscriptionNo, NotificationMessage.SubscriberUpdateSuccess + ". " + changesDone);
                     return Ok(NotificationMessage.SubscriberUpdateSuccess);
                 }
                 return BadRequest(NotificationMessage.SubscriberUpdateErrorNotFound);
