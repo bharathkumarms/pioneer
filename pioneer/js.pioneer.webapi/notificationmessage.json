@@ -4,5 +4,12 @@
   "subscriberUpdateSuccess": "Your Subscriber's details has been updated successfully",
   "subscriberUpdateErrorNotFound": "No Subscriber found to update",
   "subscriberDeleteSuccess": "Your Subscriber has been deleted successfully",
-  "subscriberDeleteErrorNotFound": "Subscriber number missing"
+  "subscriberDeleteErrorNotFound": "Subscriber number missing",
+
+  "userGetNotfound": "No User found!",
+  "userPostSuccess": "Your User has been added successfully",
+  "userUpdateSuccess": "Your User's details has been updated successfully",
+  "userUpdateErrorNotFound": "No User found to update",
+  "userDeleteSuccess": "Your User has been deleted successfully",
+  "userDeleteErrorNotFound": "User number missing"
 }

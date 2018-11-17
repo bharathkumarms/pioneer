@@ -4,16 +4,17 @@ using System.Text;
 using System.Threading.Tasks;
 using js.pioneer.model;
 using js.pioneer.repository;
+using MongoDB.Driver;
 
 namespace js.pioneer.repository
 {
     public interface IUserRepository
     {
         User Authenticate(string username, string password);
-        IEnumerable<User> GetAll();
-        User GetById(int id);
-        User Create(User user, string password);
-        void Update(User user, string password = null);
-        void Delete(int id);
+        Task<IEnumerable<User>> GetAll();
+        Task<User> GetByUserName(string userName);
+        Task Create(User model);
+        Task<bool> Update(User model);
+        Task<DeleteResult> Delete(string userName);
     }
 }

@@ -114,6 +114,96 @@ namespace js.pioneer.utils
                 }
             }
         }
+
+        public static string UserGetNotfound
+        {
+            get
+            {
+                try
+                {
+                    return items.userGetNotfound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string UserPostSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.userPostSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string UserUpdateSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.userUpdateSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string UserUpdateErrorNotFound
+        {
+            get
+            {
+                try
+                {
+                    return items.userUpdateErrorNotFound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string UserDeleteSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.userDeleteSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string UserDeleteErrorNotFound
+        {
+            get
+            {
+                try
+                {
+                    return items.userDeleteErrorNotFound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
     }
 
     internal class Notification
@@ -124,5 +214,12 @@ namespace js.pioneer.utils
         public string subscriberUpdateErrorNotFound;
         public string subscriberDeleteSuccess;
         public string subscriberDeleteErrorNotFound;
+
+        public string userGetNotfound;
+        public string userPostSuccess;
+        public string userUpdateSuccess;
+        public string userUpdateErrorNotFound;
+        public string userDeleteSuccess;
+        public string userDeleteErrorNotFound;
     }
 }

@@ -13,6 +13,7 @@ using js.pioneer.model;
 using js.pioneer.repository;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
 
 namespace js.pioneer.webapi.Controllers
 {
@@ -75,12 +76,89 @@ namespace js.pioneer.webapi.Controllers
                     Id = user.UserName,
                     Token = tokenString
                 });
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 _log.LogError(ex.ToString());
                 return Ok(new Exception(ex.ToString()));
             }
-            
+        }
+
+        [HttpGet]
+        [Route("getbyusername")]
+        public async Task<IActionResult> GetByUserName(string userName)
+        {
+            try
+            {
+                var user = await _userRepository.GetByUserName(userName);
+                if (user == null)
+                {
+                    return Json(NotificationMessage.UserGetNotfound);
+                }
+                return Json(user);
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex.ToString());
+                return Json(ex.ToString());
+            }
+        }
+
+        [HttpPost]
+        [Route("user")]
+        public async Task<IActionResult> Post(User model)
+        {
+            try
+            {
+                model.CreatedDate = DateTime.UtcNow;
+                await _userRepository.Create(model);
+
+                return Ok(NotificationMessage.UserPostSuccess);
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex.ToString());
+                return BadRequest(ex.ToString());
+            }
+        }
+
+        [HttpPut]
+        [Route("update")]
+        public async Task<IActionResult> Update(User model)
+        {
+            try
+            {
+                var result = await _userRepository.Update(model);
+                if (result)
+                {
+                    return Ok(NotificationMessage.UserUpdateSuccess);
+                }
+                return BadRequest(NotificationMessage.UserUpdateErrorNotFound);
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex.ToString());
+                return null;
+            }
+        }
+
+        [HttpDelete]
+        [Route("delete")]
+        public async Task<IActionResult> Delete(string userName)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(userName))
+                    return BadRequest(NotificationMessage.UserDeleteErrorNotFound);
+                await _userRepository.Delete(userName);
+
+                return Ok(NotificationMessage.UserDeleteSuccess);
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex.ToString());
+                return BadRequest(ex.ToString());
+            }
         }
     }
 }

@@ -31,29 +31,75 @@ namespace js.pioneer.repository
             }
         }
 
-        public User Create(User user, string password)
+        public async Task Create(User model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                //inserting data
+                await _context.Users.InsertOneAsync(model);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        public void Delete(int id)
+        public async Task<DeleteResult> Delete(string userName)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var filter = Builders<User>.Filter.Eq("UserName", userName);
+                return await _context.Users.DeleteOneAsync(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        public IEnumerable<User> GetAll()
+        public async Task<IEnumerable<User>> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _context.Users.Find(x => true).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        public User GetById(int id)
+        public async Task<User> GetByUserName(string userName)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var filter = Builders<User>.Filter.Eq("UserName", userName);
+                return await _context.Users.Find(filter).FirstOrDefaultAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        public void Update(User user, string password = null)
+        public async Task<bool> Update(User model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var filter = Builders<User>.Filter.Eq("UserName", model.UserName);
+                var user = _context.Users.Find(filter).FirstOrDefaultAsync();
+                if (user.Result == null)
+                    return false;
+                var update = Builders<User>.Update
+                                              .Set(x => x.Password, model.Password);
+
+                await _context.Users.UpdateOneAsync(filter, update);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

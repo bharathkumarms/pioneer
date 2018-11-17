@@ -64,8 +64,8 @@ namespace js.pioneer.webapi
                     OnTokenValidated = context =>
                     {
                         var userService = context.HttpContext.RequestServices.GetRequiredService<IUserRepository>();
-                        var userId = int.Parse(context.Principal.Identity.Name);
-                        var user = userService.GetById(userId);
+                        var userId = context.Principal.Identity.Name;
+                        var user = userService.GetByUserName(userId);
                         if (user == null)
                         {
                             // return unauthorized if user no longer exists
