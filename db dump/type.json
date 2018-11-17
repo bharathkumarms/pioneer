@@ -1,1 +1,1 @@
-{"_id":{"$oid":"5beb8e58431f323538123f62"},"TypeId":{"$numberInt":"1"},"Name":"Year","Days":{"$numberInt":"365"}}
+{"_id":{"$oid":"5beb8e58431f323538123f62"},"TypeId":{"$numberInt":"1"},"Name":"Year","Days":{"$numberInt":"365"},"LoyaltyPoints":{"$numberInt":"5"}}

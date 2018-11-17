@@ -4,8 +4,8 @@ using System.Text;
 
 namespace js.pioneer.model
 {
-    public class Setting
+    public class OtherSetting
     {
-        public SubscriptionType Type { get; set; }
+        public int DueDateNotificationInDays { get; set; }
     }
 }

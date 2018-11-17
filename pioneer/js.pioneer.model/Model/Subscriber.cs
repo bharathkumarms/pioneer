@@ -14,7 +14,7 @@ namespace js.pioneer.model
         public DateTime CreatedDate { get; set; }
         public string SubscriptionNo { get; set; }
         public string CustomerName { get; set; }
-        public SubscriptionType Type { get; set; }
+        public int TypeId { get; set; }
         public string Address1 { get; set; }
         public string Address2 { get; set; }
         public string Address3 { get; set; }
@@ -28,5 +28,8 @@ namespace js.pioneer.model
         public string Comments { get; set; }
         public DateTime? DueDate { get; set; }
         public bool IsInvalid { get; set; }
+
+        public string CreatedByUserName { get; set; }
+        public int LoyaltyUserId { get; set; }
     }
 }

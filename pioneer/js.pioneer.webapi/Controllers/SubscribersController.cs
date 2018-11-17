@@ -75,8 +75,6 @@ namespace js.pioneer.webapi
             {
                 if (string.IsNullOrWhiteSpace(model.CustomerName))
                     return BadRequest("Please enter Subscriber name");
-                else if (string.IsNullOrWhiteSpace(model.Type.Name))
-                    return BadRequest("Please enter type");
                 else if (model.DueDate == null)
                     return BadRequest("Please enter due date");
 
