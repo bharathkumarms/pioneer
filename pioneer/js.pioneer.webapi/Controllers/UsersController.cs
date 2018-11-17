@@ -12,13 +12,14 @@ using Microsoft.AspNetCore.Authorization;
 using js.pioneer.model;
 using js.pioneer.repository;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
 
 namespace js.pioneer.webapi.Controllers
 {
     [Authorize]
     [ApiController]
     [Route("api/[controller]")]
-    public class UsersController : ControllerBase
+    public class UsersController : Controller
     {
         private IUserRepository _userRepository;
         private readonly AppSettings _appSettings;
@@ -65,6 +66,8 @@ namespace js.pioneer.webapi.Controllers
                 };
                 var token = tokenHandler.CreateToken(tokenDescriptor);
                 var tokenString = tokenHandler.WriteToken(token);
+
+                HttpContext.Session.SetObjectAsJson("User", user);
 
                 // return basic user info (without password) and token to store client side
                 return Ok(new

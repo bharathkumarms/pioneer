@@ -16,17 +16,17 @@ namespace js.pioneer.webapi
         private readonly AppSettings _appSettings;
         readonly ILogger<SubscribersController> _log;
 
-        private IAuditTrialRepository _auditTrialRepository;
+        private IAuditTrialService _auditTrialService;
 
         public SubscribersController(ISubscriberRepository subscriberRepository,
             IOptions<AppSettings> appSettings,
             ILogger<SubscribersController> log,
-            IAuditTrialRepository auditTrialRepository)
+            IAuditTrialService auditTrialService)
         {
             _subscriberRepository = subscriberRepository;
             _appSettings = appSettings.Value;
             _log = log;
-            _auditTrialRepository = auditTrialRepository;
+            _auditTrialService = auditTrialService;
         }
         [HttpGet]
         [Route("api/subscriber")]
@@ -78,7 +78,10 @@ namespace js.pioneer.webapi
                     return BadRequest("Please enter due date");
 
                 model.CreatedDate = DateTime.UtcNow;
+
                 await _subscriberRepository.AddSubscriber(model);
+
+                await _auditTrialService.Insert(model.SubscriptionNo, NotificationMessage.SubscriberPostSuccess);
 
                 return Ok(NotificationMessage.SubscriberPostSuccess);
             }
@@ -101,10 +104,12 @@ namespace js.pioneer.webapi
                 var result = await _subscriberRepository.UpdateSubscriber(model);
                 if (result)
                 {
+                    await _auditTrialService.Insert(model.SubscriptionNo, NotificationMessage.SubscriberUpdateSuccess);
                     return Ok(NotificationMessage.SubscriberUpdateSuccess);
                 }
                 return BadRequest(NotificationMessage.SubscriberUpdateErrorNotFound);
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 _log.LogError(ex.ToString());
                 return null;
@@ -120,6 +125,8 @@ namespace js.pioneer.webapi
                 if (string.IsNullOrWhiteSpace(subscriptionNo))
                     return BadRequest(NotificationMessage.SubscriberDeleteErrorNotFound);
                 await _subscriberRepository.RemoveSubscriber(subscriptionNo);
+
+                await _auditTrialService.Insert(subscriptionNo, NotificationMessage.SubscriberUpdateSuccess);
                 return Ok(NotificationMessage.SubscriberDeleteSuccess);
             }
             catch (Exception ex)

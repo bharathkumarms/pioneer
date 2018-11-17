@@ -34,6 +34,7 @@ namespace js.pioneer.webapi
         {
             services.AddSingleton(_ => Configuration);
             services.AddCors();
+            services.AddSession();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // configure strongly typed settings objects
@@ -103,6 +104,7 @@ namespace js.pioneer.webapi
             }
 
             app.UseHttpsRedirection();
+            app.UseSession();
             app.UseMvc();
         }
     }
