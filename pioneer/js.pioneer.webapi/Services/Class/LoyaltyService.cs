@@ -41,6 +41,7 @@ namespace js.pioneer.webapi
         private async Task<IEnumerable<LoyaltyDto>> BuildLoyalty(DateTime startDate, DateTime endDate)
         {
             var subscribers = await _subscriberRepository.GetAllSubscribersInDateRange(startDate, endDate);
+            //TODO: Loop and get typeRepository and loyaltyRepository
             return null;
         }
     }
