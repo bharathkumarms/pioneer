@@ -31,5 +31,6 @@ namespace js.pioneer.model
 
         public string CreatedByUserName { get; set; }
         public int LoyaltyUserId { get; set; }
+        public DateTime? RenewedDate { get; set; }
     }
 }

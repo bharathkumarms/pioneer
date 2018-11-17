@@ -31,6 +31,7 @@ namespace js.pioneer.webapi
             _auditTrialService = auditTrialService;
             _compareUtil = compareUtil;
         }
+
         [HttpGet]
         [Route("api/subscriber")]
         public Task<IEnumerable<Subscriber>> Get()

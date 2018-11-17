@@ -92,5 +92,24 @@ namespace js.pioneer.repository
         {
             throw new NotImplementedException();
         }
+
+        public async Task<IEnumerable<Subscriber>> GetAllSubscribersInDateRange(DateTime startDate, DateTime endDate)
+        {
+            try
+            {
+                var filterBuilder = Builders<Subscriber>.Filter;
+
+                var filter = (filterBuilder.Gte(x => x.CreatedDate, startDate) &
+                                filterBuilder.Lt(x => x.CreatedDate, endDate)) | 
+                                (filterBuilder.Gte(x => x.RenewedDate, startDate) &
+                                filterBuilder.Lt(x => x.RenewedDate, endDate));
+
+                return await _context.Subscribers.Find(filter).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

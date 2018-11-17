@@ -16,5 +16,7 @@ namespace js.pioneer.repository
         Task<bool> UpdateSubscriber(Subscriber model);
         Task<DeleteResult> RemoveSubscriber(string subscriptionNo);
         Task<DeleteResult> RemoveAllSubscribers();
+
+        Task<IEnumerable<Subscriber>> GetAllSubscribersInDateRange(DateTime startDate, DateTime endDate);
     }
 }
