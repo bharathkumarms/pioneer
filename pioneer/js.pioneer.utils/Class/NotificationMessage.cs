@@ -388,6 +388,99 @@ namespace js.pioneer.utils
             }
         }
         //End Loyaltyuser
+
+        //Start Complaint
+
+        public static string ComplaintGetNotfound
+        {
+            get
+            {
+                try
+                {
+                    return items.complaintGetNotfound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string ComplaintPostSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.complaintPostSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string ComplaintUpdateSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.complaintUpdateSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string ComplaintUpdateErrorNotFound
+        {
+            get
+            {
+                try
+                {
+                    return items.complaintUpdateErrorNotFound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string ComplaintDeleteSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.complaintDeleteSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string ComplaintDeleteErrorNotFound
+        {
+            get
+            {
+                try
+                {
+                    return items.complaintDeleteErrorNotFound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+        //End Complaint
     }
 
     internal class Notification
@@ -420,5 +513,12 @@ namespace js.pioneer.utils
         public string loyaltyuserUpdateErrorNotFound;
         public string loyaltyuserDeleteSuccess;
         public string loyaltyuserDeleteErrorNotFound;
+
+        public string complaintGetNotfound;
+        public string complaintPostSuccess;
+        public string complaintUpdateSuccess;
+        public string complaintUpdateErrorNotFound;
+        public string complaintDeleteSuccess;
+        public string complaintDeleteErrorNotFound;
     }
 }

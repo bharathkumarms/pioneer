@@ -25,5 +25,12 @@
   "loyaltyuserUpdateSuccess": "Your Loyaltyuser's details has been updated successfully",
   "loyaltyuserUpdateErrorNotFound": "No Loyaltyuser found to update",
   "loyaltyuserDeleteSuccess": "Your Loyaltyuser has been deleted successfully",
-  "loyaltyuserDeleteErrorNotFound": "Loyaltyuser number missing"
+  "loyaltyuserDeleteErrorNotFound": "Loyaltyuser number missing",
+
+  "complaintGetNotfound": "No Complaint found!",
+  "complaintPostSuccess": "Your Complaint has been added successfully",
+  "complaintUpdateSuccess": "Your Complaint's details has been updated successfully",
+  "complaintUpdateErrorNotFound": "No Complaint found to update",
+  "complaintDeleteSuccess": "Your Complaint has been deleted successfully",
+  "complaintDeleteErrorNotFound": "Complaint number missing"
 }
