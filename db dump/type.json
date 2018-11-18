@@ -1,1 +1,1 @@
-{"_id":{"$oid":"5beb8e58431f323538123f62"},"TypeId":{"$numberInt":"1"},"Name":"Year","Days":{"$numberInt":"365"},"LoyaltyPoints":{"$numberInt":"5"}}
+{"_id":{"$oid":"5beb8e58431f323538123f62"},"TypeId":{"$numberInt":"1"},"Name":"Year","Days":{"$numberInt":"365"},"LoyaltyPoints":{"$numberInt":"5"},"CreatedDate":{"$date":{"$numberLong":"1542479400000"}},"ModifiedDate":{"$date":{"$numberLong":"1542499200000"}}}

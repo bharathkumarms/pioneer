@@ -11,5 +11,12 @@
   "userUpdateSuccess": "Your User's details has been updated successfully",
   "userUpdateErrorNotFound": "No User found to update",
   "userDeleteSuccess": "Your User has been deleted successfully",
-  "userDeleteErrorNotFound": "User number missing"
+  "userDeleteErrorNotFound": "User number missing",
+
+  "typeGetNotfound": "No Type found!",
+  "typePostSuccess": "Your Type has been added successfully",
+  "typeUpdateSuccess": "Your Type's details has been updated successfully",
+  "typeUpdateErrorNotFound": "No Type found to update",
+  "typeDeleteSuccess": "Your Type has been deleted successfully",
+  "typeDeleteErrorNotFound": "Type number missing"
 }

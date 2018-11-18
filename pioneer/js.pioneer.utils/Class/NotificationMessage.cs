@@ -204,6 +204,98 @@ namespace js.pioneer.utils
                 }
             }
         }
+
+        //Start Type
+        public static string TypeGetNotfound
+        {
+            get
+            {
+                try
+                {
+                    return items.typeGetNotfound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string TypePostSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.typePostSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string TypeUpdateSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.typeUpdateSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string TypeUpdateErrorNotFound
+        {
+            get
+            {
+                try
+                {
+                    return items.typeUpdateErrorNotFound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string TypeDeleteSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.typeDeleteSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string TypeDeleteErrorNotFound
+        {
+            get
+            {
+                try
+                {
+                    return items.typeDeleteErrorNotFound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+        //End Type
     }
 
     internal class Notification
@@ -221,5 +313,13 @@ namespace js.pioneer.utils
         public string userUpdateErrorNotFound;
         public string userDeleteSuccess;
         public string userDeleteErrorNotFound;
+
+
+        public string typeGetNotfound;
+        public string typePostSuccess;
+        public string typeUpdateSuccess;
+        public string typeUpdateErrorNotFound;
+        public string typeDeleteSuccess;
+        public string typeDeleteErrorNotFound;
     }
 }
