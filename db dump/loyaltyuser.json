@@ -1,1 +1,1 @@
-{"_id":{"$oid":"5bef7bd8e9f40928bc0193e5"},"LoyaltyUserId":{"$numberInt":"1"},"Name":"hashi toss dass"}
+{"_id":{"$oid":"5bef7bd8e9f40928bc0193e5"},"LoyaltyUserId":{"$numberInt":"1"},"Name":"hashi toss dass","CreatedDate":{"$date":{"$numberLong":"1539109800000"}},"ModifiedDate":{"$date":{"$numberLong":"1539109800000"}}}

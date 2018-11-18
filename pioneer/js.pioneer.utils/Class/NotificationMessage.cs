@@ -296,6 +296,98 @@ namespace js.pioneer.utils
             }
         }
         //End Type
+
+        //Start Loyaltyuser
+        public static string LoyaltyuserGetNotfound
+        {
+            get
+            {
+                try
+                {
+                    return items.loyaltyuserGetNotfound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string LoyaltyuserPostSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.loyaltyuserPostSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string LoyaltyuserUpdateSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.loyaltyuserUpdateSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string LoyaltyuserUpdateErrorNotFound
+        {
+            get
+            {
+                try
+                {
+                    return items.loyaltyuserUpdateErrorNotFound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string LoyaltyuserDeleteSuccess
+        {
+            get
+            {
+                try
+                {
+                    return items.loyaltyuserDeleteSuccess;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static string LoyaltyuserDeleteErrorNotFound
+        {
+            get
+            {
+                try
+                {
+                    return items.loyaltyuserDeleteErrorNotFound;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+        //End Loyaltyuser
     }
 
     internal class Notification
@@ -321,5 +413,12 @@ namespace js.pioneer.utils
         public string typeUpdateErrorNotFound;
         public string typeDeleteSuccess;
         public string typeDeleteErrorNotFound;
+
+        public string loyaltyuserGetNotfound;
+        public string loyaltyuserPostSuccess;
+        public string loyaltyuserUpdateSuccess;
+        public string loyaltyuserUpdateErrorNotFound;
+        public string loyaltyuserDeleteSuccess;
+        public string loyaltyuserDeleteErrorNotFound;
     }
 }

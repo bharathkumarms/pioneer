@@ -51,5 +51,13 @@ namespace js.pioneer.repository
                 return _database.GetCollection<SubscriptionType>("type");
             }
         }
+
+        public IMongoCollection<LoyaltyUser> LoyaltyUsers
+        {
+            get
+            {
+                return _database.GetCollection<LoyaltyUser>("loyaltyuser");
+            }
+        }
     }
 }

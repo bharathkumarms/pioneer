@@ -18,5 +18,12 @@
   "typeUpdateSuccess": "Your Type's details has been updated successfully",
   "typeUpdateErrorNotFound": "No Type found to update",
   "typeDeleteSuccess": "Your Type has been deleted successfully",
-  "typeDeleteErrorNotFound": "Type number missing"
+  "typeDeleteErrorNotFound": "Type number missing",
+
+  "loyaltyuserGetNotfound": "No Loyaltyuser found!",
+  "loyaltyuserPostSuccess": "Your Loyaltyuser has been added successfully",
+  "loyaltyuserUpdateSuccess": "Your Loyaltyuser's details has been updated successfully",
+  "loyaltyuserUpdateErrorNotFound": "No Loyaltyuser found to update",
+  "loyaltyuserDeleteSuccess": "Your Loyaltyuser has been deleted successfully",
+  "loyaltyuserDeleteErrorNotFound": "Loyaltyuser number missing"
 }
